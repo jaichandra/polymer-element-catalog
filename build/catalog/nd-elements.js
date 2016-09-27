@@ -59,10 +59,6 @@ module.exports = function(imports) {
                             if (el.hero) hero = '/bower_components/nd-library/dist/' + elementName + '/' + el.hero;
                         });
                         
-                        console.log('-start-');
-                        console.log(data);
-                        console.log('-end-');
-                        
                         var active = null;
                         var demo = null;
                         for (var i in combined) {
