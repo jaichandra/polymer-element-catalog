@@ -1,6 +1,13 @@
 {
   "packages": [
     {
+      "name":"nd-library",
+      "title":"Nielsen Elements",
+      "color":"#009DD9",
+      "symbol":"Nd",
+      "tagline": "Nielsen custom elements"
+    },
+    {
       "name":"app-elements",
       "title":"App Elements",
       "color":"#ddc9e6",

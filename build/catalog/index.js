@@ -5,8 +5,8 @@ var path = require('path');
 
 var _ = require('lodash');
 
-var packages = require('./packages');
-var elements = require('./elements');
+var packages = require('./nd-packages');
+var elements = require('./nd-elements');
 var tags = require('./tags');
 var guides = require('./guides');
 var objectFromStreams = require('./utils/object-from-streams');
