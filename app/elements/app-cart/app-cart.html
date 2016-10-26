@@ -84,7 +84,7 @@
     </paper-toolbar>
     <paper-tabs id="tabs" selected="{{_tab}}">
       <paper-tab name="elements">Elements (<span>[[items.length]]</span>)</paper-tab>
-      <paper-tab name="download">Download</paper-tab>
+      <!--<paper-tab name="download">Download</paper-tab>-->
     </paper-tabs>
     <iron-pages selected="[[_tab]]" class="flex">
       <div id="elements">
@@ -190,7 +190,7 @@ Polymer({
   },
   bowerString: function() {
     return JSON.stringify({
-      name: "polymer-project",
+      name: "nd-library",
       dependencies: this._itemsAsDependencies()
     }, null, 2);
   },
