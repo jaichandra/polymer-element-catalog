@@ -58,6 +58,10 @@
                     </div>
                   </a>
                 </template>
+
+                <div class="bower-command-label">Bower Command</div>
+                <input class="bower-command" title="Bower Command" readonly value="[[_bowerCommand()]]" on-tap="_selectAllBowerCommand">
+
               </nav>
             </div>
             <div hidden$="[[!tag]]" id="current-tag" class="horizontal layout center">
@@ -131,6 +135,7 @@
       },
 
       filter: function(element) {
+        console.log(element.name);
         if (this.q && this.q.length && element.name.indexOf(this.q) < 0) {
           return false;
         }
@@ -213,6 +218,12 @@
             this.$.query.setSelectionRange(q.length, q.length);
           });
         }
+      },
+      _bowerCommand: function() {
+        return 'bower install --save https://git1.affinnova.com/chanja14/nd-library.git';
+      },
+      _selectAllBowerCommand: function(e) {
+        e.currentTarget.select();
       },
       updateURL: function(q, packageName, packageInfo, tag, view) {
         var qs = this._buildQueryString();

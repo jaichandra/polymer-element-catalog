@@ -47,10 +47,10 @@
             </div>
 
             <nav id="nav" class="nav" attr-for-selected="name" selected="{{view}}">
-              <a is="app-link" class="item" href="[[_link(active,'docs')]]" active$="[[_isEqual(view,'docs')]]"><iron-icon icon="description"></iron-icon> <span>Docs</span></a>
               <template is="dom-repeat" items="[[docDemos]]">
                 <a is="app-link" class="item" href="[[_demoLink(active,item.path)]]" active$="[[_demoActive(item.path,view)]]"><iron-icon icon="visibility"></iron-icon> <span>[[_demoName(item.desc)]]</span></a>
               </template>
+              <a is="app-link" class="item" href="[[_link(active,'docs')]]" active$="[[_isEqual(view,'docs')]]"><iron-icon icon="description"></iron-icon> <span>Docs</span></a>
               <a class="item" href="[[_githubLink(metadata.source)]]" target="_blank"><iron-icon icon="code"></iron-icon> <span>Source</span></a>
             </nav>
 
@@ -58,8 +58,8 @@
               <paper-item hidden$="[[!metadata]]" on-tap="toggleCart"><cart-item-icon id="cartIcon" element="[[element]]"></cart-item-icon></paper-item>
             </div>
 
-            <div class="bower-command-label">Bower Command</div>
-            <input class="bower-command" title="Bower Command" readonly value="[[_bowerCommand(metadata.source)]]" on-tap="_selectAllBowerCommand">
+            <!--<div class="bower-command-label">Bower Command</div>-->
+            <!--<input class="bower-command" title="Bower Command" readonly value="[[_bowerCommand(metadata.source)]]" on-tap="_selectAllBowerCommand">-->
 
             <section hidden$="[[_oneOrFewer(docElements, docBehaviors)]]" class="shrinkable">
               <h4>Bundled Elements</h4>
@@ -150,7 +150,7 @@
       return this.view === 'demo:' + path;
     },
     _githubLink: function(source) {
-      return 'https://github.com/' + source;
+      return 'https://git1.affinnova.com/chanja14/nd-library/tree/master/src/' + this.element;
     },
     getURL: function(active,view,force) {
       var url = "/elements/" + this.element;
