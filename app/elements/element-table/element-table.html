@@ -157,7 +157,7 @@
         if (sourceEvent.ctrlKey || sourceEvent.metaKey) {
           window.open(A.href);
         } else {
-          this.fire('nav', {url: A.href});
+          this.fire('nav', {url: A.href});          
         }
         e.preventDefault();
       }
@@ -219,7 +219,8 @@
     },
 
     _elementLink: function(name) {
-      return "/elements/" + name;
+      // return "/elements/" + name;
+      return '/elements/' + name + '?active=' + name + "&view=demo:" + 'demo/index.html';
     },
 
     _getHeaderStyle: function(color) {
