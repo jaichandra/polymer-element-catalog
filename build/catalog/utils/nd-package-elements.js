@@ -21,7 +21,7 @@ module.exports = function (imports) {
               return fs.statSync(path.join(packageFolders, file)).isDirectory();
           });
 
-      elements = folders.map(function(element) {
+      elements = folders.filter(function(element) {
           if (element.indexOf('nd') > -1) {
               return element;
           }
